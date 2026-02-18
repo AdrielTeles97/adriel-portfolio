@@ -1,5 +1,11 @@
+import { Hero } from "@/components/Hero/Hero";
+import { Navbar } from "@/components/Navbar/Navbar";
+
 export default function Home() {
   return (
-    <h1>Teste</h1>
+    <>
+        <Navbar />
+        <Hero />
+    </>
   );
 }

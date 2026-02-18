@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Outfit } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const syne = Syne({
 const outfit = Outfit({
     subsets: ["latin"],
     weight: ["400", "600", "700", "800"],
-    variable: "--font-display"
+    variable: "--font-body"
 })
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${syne.variable} ${outfit.variable} antialiased`}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>
