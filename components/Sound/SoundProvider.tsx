@@ -34,12 +34,18 @@ interface SoundProviderProps {
 
 export function SoundProvider({ children }: SoundProviderProps) {
     const [isSoundEnabled, setIsSoundEnabled] = useState(false)
+    const isSoundEnabledRef = useRef(false)
     const isInitializedRef = useRef(false)
 
     const ambientRef = useRef<HTMLAudioElement | null>(null)
     const hoverRef = useRef<HTMLAudioElement | null>(null)
     const clickRef = useRef<HTMLAudioElement | null>(null)
     const transitionRef = useRef<HTMLAudioElement | null>(null)
+
+    // Keep ref in sync with state
+    useEffect(() => {
+        isSoundEnabledRef.current = isSoundEnabled
+    }, [isSoundEnabled])
 
     // Initialize audio elements
     useEffect(() => {
@@ -51,13 +57,13 @@ export function SoundProvider({ children }: SoundProviderProps) {
 
             // Interaction sounds
             hoverRef.current = new Audio('/sounds/hover.mp3')
-            hoverRef.current.volume = 0.1
+            hoverRef.current.volume = 0.2
 
             clickRef.current = new Audio('/sounds/click.mp3')
-            clickRef.current.volume = 0.15
+            clickRef.current.volume = 0.25
 
             transitionRef.current = new Audio('/sounds/transition.mp3')
-            transitionRef.current.volume = 0.2
+            transitionRef.current.volume = 0.3
 
             isInitializedRef.current = true
         }
@@ -80,25 +86,25 @@ export function SoundProvider({ children }: SoundProviderProps) {
     }, [])
 
     const playHover = useCallback(() => {
-        if (isSoundEnabled && hoverRef.current) {
+        if (isSoundEnabledRef.current && hoverRef.current) {
             hoverRef.current.currentTime = 0
             hoverRef.current.play().catch(() => {})
         }
-    }, [isSoundEnabled])
+    }, [])
 
     const playClick = useCallback(() => {
-        if (isSoundEnabled && clickRef.current) {
+        if (isSoundEnabledRef.current && clickRef.current) {
             clickRef.current.currentTime = 0
             clickRef.current.play().catch(() => {})
         }
-    }, [isSoundEnabled])
+    }, [])
 
     const playTransition = useCallback(() => {
-        if (isSoundEnabled && transitionRef.current) {
+        if (isSoundEnabledRef.current && transitionRef.current) {
             transitionRef.current.currentTime = 0
             transitionRef.current.play().catch(() => {})
         }
-    }, [isSoundEnabled])
+    }, [])
 
     return (
         <SoundContext.Provider

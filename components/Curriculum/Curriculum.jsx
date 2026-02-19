@@ -1,11 +1,22 @@
+'use client'
+
+import { useSoundContext } from '../Sound/SoundProvider'
 import styles from './Curriculum.module.css'
 
 export const Curriculum = () => {
+    const { playHover, playClick } = useSoundContext()
+
     return (
         <div id="cv-section" className={styles.cv_section}>
             <div className={styles.cv_wrapper}>
                 <p>Quer saber mais sobre minha trajetória ?</p>
-                <a href="#" className={styles.btn_download}>
+                <a
+                    href="/Currículo-adrieltes.pdf"
+                    download="Curriculo-Adriel-Teles.pdf"
+                    className={styles.btn_download}
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                >
                     {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

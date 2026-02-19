@@ -76,7 +76,9 @@ body::before {
         background 0.3s ease,
         border-color 0.3s ease,
         color 0.3s ease;
-    cursor: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 .btnOutline:hover {
@@ -95,7 +97,9 @@ body::before {
     align-items: center;
     gap: 8px;
     transition: color 0.3s ease;
-    cursor: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 /* ─── TAG (reutilizado em About) ─── */
@@ -227,4 +231,3 @@ body {
         text-align: center;
     }
 }
-
