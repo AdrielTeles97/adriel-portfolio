@@ -1,0 +1,53 @@
+.cv_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 48px;
+    border-top: 1px solid var(--border);
+}
+
+.cv_wrapper {
+    text-align: center;
+}
+
+.cv_wrapper p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    letter-spacing: 0.06em;
+}
+
+.btn_download {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 48px;
+    border: 1px solid rgba(245,244,240, 0.2);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+
+.btn_download::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    z-index: -1;
+}
+
+.btn-download:hover::before { transform: scaleX(1); }
+.btn-download:hover { color: var(--black); border-color: var(--white); }
+.btn-download svg { width: 14px; height: 14px; }

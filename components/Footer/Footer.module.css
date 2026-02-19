@@ -1,0 +1,28 @@
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iLoveCoffe {
+    display: flex;
+    align-items: center;
+    color: rgba(245, 244, 240, 0.2); 
+}
+
+.footer p {
+    font-size: 11px;
+    color: rgba(245, 244, 240, 0.2);   
+    letter-spacing: 0.02em; 
+}
+
+.footer_logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(245, 244, 240, 0.15);
+}
