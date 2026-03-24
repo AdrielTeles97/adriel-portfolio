@@ -13,7 +13,9 @@ export const Hero = () => {
             <p className={styles.hero_label}>
                 Portfólio - Designer & Desenvolvimento
             </p>
-            <h1 className={styles.hero_title}>Criando experiências</h1>
+            <h1 className={styles.hero_title}>
+                Criando experi<wbr />ências
+            </h1>
             <p className={styles.hero_subtitle}>
                 Design, código e estratégia - Tudo em um só lugar.
             </p>

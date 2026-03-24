@@ -9,12 +9,20 @@
   .contact_label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
   .contact_title {
     font-family: var(--font-display);
-    font-size: clamp(48px, 7vw, 100px);
+    /* piso baixo: 48px forçava overflow de palavras longas no mobile */
+    font-size: clamp(26px, 9.5vw, 100px);
     font-weight: 800;
-    line-height: 0.88;
+    line-height: 0.92;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     margin-bottom: 48px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 12px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .contact_title em { font-style: normal; }
   .contact_email {
@@ -31,7 +39,18 @@
   }
   .contact_email:hover { color: var(--white); border-color: var(--white); }
   .contact_socials {
-    display: flex; gap: 32px; justify-content: center; align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .social_sep {
+    color: var(--border);
+    flex-shrink: 0;
   }
   .social_link {
     font-size: 11px;
@@ -43,3 +62,37 @@
     cursor: none;
   }
   .social_link:hover { color: var(--white); }
+
+  @media (max-width: 768px) {
+    .contact {
+      padding: 96px 16px 80px;
+    }
+
+    .contact_title {
+      margin-bottom: 32px;
+      font-size: clamp(24px, 11vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      padding-inline: 8px;
+    }
+
+    .contact_email {
+      word-break: break-word;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .contact_socials {
+      gap: 10px 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .social_sep {
+      display: none;
+    }
+
+    .contact_socials {
+      gap: 14px;
+    }
+  }

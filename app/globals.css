@@ -208,26 +208,10 @@ body {
     section {
         padding: 80px 24px;
     }
-    .about {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-    .project-item:first-child {
-        grid-column: span 1;
-        aspect-ratio: 16/10;
-    }
-    .edu-item {
-        grid-template-columns: 60px 1fr;
-    }
-    .edu-badge {
-        display: none;
-    }
     footer {
         flex-direction: column;
         gap: 12px;
         text-align: center;
+        padding: 28px 24px;
     }
 }

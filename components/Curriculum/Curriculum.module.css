@@ -60,3 +60,14 @@
     width: 14px;
     height: 14px;
 }
+
+@media (max-width: 768px) {
+    .cv_section {
+        padding: 64px 24px;
+    }
+
+    .btn_download {
+        padding: 16px 28px;
+        font-size: 11px;
+    }
+}

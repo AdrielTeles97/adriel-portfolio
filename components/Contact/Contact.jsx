@@ -7,7 +7,11 @@ export const Contact = () => {
             <h2 className={styles.contact_title}>
                 Vamos
                 <br />
-                <em>Trabalhar</em>
+                <em>
+                    Trabal
+                    <wbr />
+                    har
+                </em>
                 <br />
                 Juntos ?
             </h2>
@@ -15,18 +19,28 @@ export const Contact = () => {
                 adrielteles@dev.com
             </a>
             <div className={styles.contact_socials}>
-                <a href="#" className={styles.social_link}>
+                <a
+                    href="https://www.linkedin.com/in/adriel-teles97/"
+                    className={styles.social_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     LinkedIn
                 </a>
-                <span style={{color: "var(--border)" }}>—</span>
-                <a href="#" className={styles.social_link}>
+                <span className={styles.social_sep}>—</span>
+                <a
+                    href="https://github.com/AdrielTeles97"
+                    className={styles.social_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub
                 </a>
-                <span style={{color: "var(--border)" }}>—</span>
+                <span className={styles.social_sep}>—</span>
                 <a href="#" className={styles.social_link}>
                     Twitter
                 </a>
-                <span style={{color: "var(--border)" }}>—</span>
+                <span className={styles.social_sep}>—</span>
                 <a href="#" className={styles.social_link}>
                     Instagram
                 </a>

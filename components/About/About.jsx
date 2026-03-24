@@ -12,9 +12,10 @@ export const About = () => {
             <p>Com foco em detalhes e uma visão sistêmica, desenvolvo produtos que não apenas funcionam — mas que surpreendem.</p>
         </div>
         <div className={styles.about_tags}>
-            <span className={styles.tag}>UI/UX Design</span>
             <span className={styles.tag}>Front End Developer</span>
+            <span className={styles.tag}>Backend Developer</span>
             <span className={styles.tag}>React</span>
+            <span className={styles.tag}>Node js</span>
             <span className={styles.tag}>Figma</span>
             <span className={styles.tag}>Motion Design</span>
         </div>

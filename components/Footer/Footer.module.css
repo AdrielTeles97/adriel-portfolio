@@ -26,3 +26,15 @@
     text-transform: uppercase;
     color: rgba(245, 244, 240, 0.15);
 }
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 28px 24px;
+        flex-wrap: wrap;
+    }
+
+    .footer p {
+        font-size: 10px;
+        max-width: 100%;
+    }
+}
