@@ -33,10 +33,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-                {/* Google Analytics */}
-                {/* Substitua G-XXXXXXXXXX pelo seu ID do Google Analytics */}
+                {/* Google tag (gtag.js) */}
                 <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-FFKPZX3V9Z"
                     strategy="afterInteractive"
                 />
                 <Script id="gtag-init" strategy="afterInteractive">
@@ -44,7 +44,7 @@ export default function RootLayout({
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
-                        gtag('config', 'G-XXXXXXXXXX');
+                        gtag('config', 'G-FFKPZX3V9Z');
                     `}
                 </Script>
             </head>
