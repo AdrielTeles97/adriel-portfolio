@@ -15,8 +15,8 @@ export const Contact = () => {
                 <br />
                 Juntos ?
             </h2>
-            <a href="mailto:adrielteles@dev.com" className={styles.contact_email}>
-                adrielteles@dev.com
+            <a href="mailto:adrielt00@yahoo.com.br" className={styles.contact_email}>
+                adrielt00@yahoo.com.br
             </a>
             <div className={styles.contact_socials}>
                 <a
@@ -37,11 +37,7 @@ export const Contact = () => {
                     GitHub
                 </a>
                 <span className={styles.social_sep}>—</span>
-                <a href="#" className={styles.social_link}>
-                    Twitter
-                </a>
-                <span className={styles.social_sep}>—</span>
-                <a href="#" className={styles.social_link}>
+                <a href="https://www.instagram.com/adrielt97/" className={styles.social_link}>
                     Instagram
                 </a>
             </div>

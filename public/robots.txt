@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Permitir indexação de páginas importantes para buscas de freelancer, dev web, criação de sites e sistemas
+# (Certifique-se de que suas páginas tenham títulos, descrições e conteúdos otimizados para essas palavras-chave)
+
+# Bloqueie pastas privadas se houver
+# Disallow: /private/
+
+Sitemap: https://SEU_DOMINIO/sitemap.xml
